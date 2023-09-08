@@ -1,38 +1,44 @@
-.App {
-  text-align: center;
+#boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#navbarBox {
+  margin-bottom: 20px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#alert-message {
+  position: absolute;
+  right: 0;
+  animation: change 1s ease;
+  z-index: 1;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes change {
   from {
-    transform: rotate(0deg);
+    top: 40px;
   }
   to {
-    transform: rotate(360deg);
+    top: 60px;
   }
+}
+#MUICards {
+  cursor: pointer;
+  transition: 1s;
+}
+#MUICards:hover {
+  transform: translateY(-5px);
+}
+#CardButton:hover {
+  background-color: #1976d2;
+  color: aliceblue;
+}
+#CardButton {
+  transition: 1s;
+}
+#errorMessage {
+  display: flex;
+  justify-content: center;
+  height: 60vh;
+  align-items: center;
+  flex-direction: column;
 }
